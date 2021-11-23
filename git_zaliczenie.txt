@@ -1,0 +1,128 @@
+1. Stwórz nowe repozytorium na GitHub.
+
+git config --global user.name "name surname"
+git config --global user.email "email@email.com"
+mkdir git_egz
+cd git_egz
+//create repo on github
+//copy what github tells you
+echo "# git_egz" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://YOUR_TOKEN_HERE@github.com/youraccounthere/git_egz.git
+git push -u origin main
+
+2. Dodaj pliki README.md oraz .gitignore (mogą być wygenerowane z GitHub lub stworzone ręcznie).
+
+touch .gitignore
+
+3. Stwórz nowy branch "personal_details" i przełączamy się na nowy branch.
+
+git branch personal_details
+git checkout personal_details
+
+4. Wpisz w pliku README.md wiersz "First name and last name: XYZ". W miejsce XYZ proszę podać własne dane.
+
+vim README.md
+"i" First name and last name: XYZ "esc:wq enter"
+
+5. Dla powyższych danych dodaj commit z wiadomością "First name and last name".
+
+git commit -am "First name and last name"
+
+6. Wpisz w pliku README.md wiersz "Index number: ABC". W miejsce ABC proszę podać własny numer indeksu.
+
+vim README.md
+"i" Index number: ABC "esc:wq enter"
+
+7. Dla powyższych danych dodaj commit z wiadomością "Index number".
+
+git commit -am "Index number"
+
+8. Wpisz w pliku README.md wiersz "E-mail adress: BKS". W miejsce BKS proszę podać własny adres e-mail.
+
+vim README.md
+"i" E-mail adress: BKS "esc:wq enter"
+
+9. Dla powyższych danych dodaj commit z wiadomością "E-mail adress".
+
+git commit -am "E-mail adress"
+
+10. Prześlij zmiany do repozytorium zdalnego (git push origin personal_details)
+
+git push origin personal_details
+
+11. Dodaj tag do powyższego commit. Tag powinien mieć nazwę v1.0 i wiadomość "personal_data".
+
+git tag -a v1.0 -m "personal_data"
+
+12. Prześlij tag do repozytorium zdalnego.
+
+git push origin v1.0
+
+13. Stwórz Pull request z brancha "personal_details" do "master" i dokonaj merge zmian (zmiany te powinny pojawić się na master).
+
+//click compare & pull request, create pull request, merge pull request
+
+14. Tworzymy nowy branch z brancha "master" o nazwie "texts" i przełączamy się na nowy branch.
+
+git checkout main
+git pull
+git checkout -b texts
+
+15. Dodajemy nowy plik (.md lub .txt) o nazwie "Lorem ipsum" i wklejamy do niego dowolny fragment Lorem ipusm (Link do generatora tekstów: http://lipsum.pl/.).
+
+vim Lorem\ ipsum.md
+"i" Lorem ipsum... (shift + enter to paste) "esc:wq enter"
+
+16. Dodaj commit o wiadomości "Lorem ipusum".
+
+git add Lorem\ ipsum.md
+git commit -m "Lorem ipsum"
+
+17. Dodajemy nowy plik (.md lub .txt) o nazwie "Kant Rozprawa" i wklejamy do niego dowolny fragment tekstu książki (Link do generatora tekstów: http://lipsum.pl/).
+
+vim Kant\ rozprawa.txt
+"i" Tresc... (shift + enter to paste) "esc:wq enter"
+
+18. Dodaj commit o wiadomości "Kant rozprawa".
+
+git add Kant\ rozprawa.txt
+git commit -m "Kant rozprawa"
+
+19. Prześlij zmiany do repozytorium zdalnego
+
+git push origin texts
+
+20. Dodaj tag do powyższego commit. Tag powinien mieć nazwę v1.1 i wiadomość "LoremIpsum/Kant".
+
+git tag -a v1.1 -m "LoremIpsum/Kant"
+
+21. Prześlij tag do repozytorium zdalnego.
+
+git push origin v1.1
+
+23. Stwórz Pull request z brancha "texts" do "master" i dokonać merge zmian (zmiany powinny być na master).
+
+//click compare & pull request, create pull request, merge pull request
+
+24. Przełącz się na commit "Lorem ipsum", dodaj kolejny commit (może być nowy plik lub edycja Lorem ipsum) i utwórz z tego commit nowy branch o nazwie "deathedHeadBranch"
+
+git log // copy first 7 chars from commit
+git checkout ccaa3ef
+vim file
+"i" someting "esc:wq enter"
+git add file
+git commit -m "some file"
+git checkout -b detachedHeadBranch
+
+25. Wykonaj polecenie "git reflog" i wynik tej komendy umieść w pliku, dodaj commit (nazwa pliku i wiadomość commit może to być słowo "reflog"). Plik może być tekstowy lub grafika (tu obojętnie).
+
+git reflog > reflog
+git add reflog
+git commit -m "reflog" 
+git push origin detachedHeadBranch
+
+26. Udostępnij repozytorium - należy podać link do repozytorium jako rozwiązanie zadania. Uwaga! Repozytorium może być publicze lub prywatne. Jeżeli ktoś zrobi prywatne to należy pamiętać o udostępnieniu.
