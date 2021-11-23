@@ -1,0 +1,21 @@
+d862843 HEAD@{0}: checkout: moving from main to detachedHeadBranch
+c55add9 HEAD@{1}: checkout: moving from detachedHeadBranch to main
+d862843 HEAD@{2}: checkout: moving from main to detachedHeadBranch
+c55add9 HEAD@{3}: pull: Fast-forward
+e936151 HEAD@{4}: checkout: moving from detachedHeadBranch to main
+d862843 HEAD@{5}: checkout: moving from d862843bce418b25d0486298d04e599eb407f746 to detachedHeadBranch
+d862843 HEAD@{6}: commit: file
+ccaa3ef HEAD@{7}: checkout: moving from texts to ccaa3ef
+525693b HEAD@{8}: checkout: moving from ccaa3ef202f5667ccdf77b3c4446c0289ffd5d41 to texts
+ccaa3ef HEAD@{9}: checkout: moving from texts to ccaa3ef
+525693b HEAD@{10}: commit: Kant rozprawa
+ccaa3ef HEAD@{11}: commit: Lorem ipsum
+e936151 HEAD@{12}: checkout: moving from main to texts
+e936151 HEAD@{13}: pull: Fast-forward
+89cf8bf HEAD@{14}: checkout: moving from personal_details to main
+69f51de HEAD@{15}: commit: E-mail adress
+f594b03 HEAD@{16}: commit: Index number
+0775c49 HEAD@{17}: commit: First name and last name
+89cf8bf HEAD@{18}: checkout: moving from main to personal_details
+89cf8bf HEAD@{19}: Branch: renamed refs/heads/main to refs/heads/main
+89cf8bf HEAD@{21}: commit (initial): first commit
